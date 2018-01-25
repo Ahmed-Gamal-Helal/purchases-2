@@ -1,0 +1,80 @@
+
+.customer-support {
+    padding: 2em;
+    .container {
+        h2 {
+            padding-bottom: .5em;
+        }
+        .left-customer {
+            h6 {
+                font-weight: bold;
+            }
+            p:last-of-type {
+                padding-bottom: 5em;
+            }
+            a {
+                background-color: $secColor;
+                padding: .75em 1.25em;
+                color: $white;
+                font-weight: bold;
+                &:hover {
+                    background-color: $white;
+                    border: 1px solid $secColor;
+                    color: $secColor;
+                }
+            }
+        }
+        .right-customer {
+            background-color: $white;
+            form {
+                padding: 0 4em;
+                .form-control {
+                    &:focus {
+                        box-shadow: 0 !important;
+                    }
+                }
+                input, textarea {
+                    background-color: 1px solid #eee;
+                    border-radius: 1em;
+                    padding: .5em 1em;
+                    &::placeholder {
+                        font-family: $baseFont;
+                        color: #777;
+                        }
+                    }
+                textarea {
+                    border: 1px solid #ced4da;
+                    &:focus {
+                        color: #495057;
+                        background-color: #fff;
+                        border-color: $secColor;
+                        outline: 0;
+                        box-shadow: 0 0 0 0.2rem rgba(0, 255, 21, 0.25);
+                    }
+                }
+                button {
+                    background: $secColor;
+                    color: $white;
+                    padding: 1em 1.5em;
+                    font-weight: bold;
+                    &:hover {
+                        background-color: $white;
+                        border: 1px solid $secColor;
+                        color: $secColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.non-form {
+    display: none;
+}
+@media(max-width:767px) {
+    .right-customer {
+        margin-top: 3em;
+        form {
+            padding: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.navbar {
+    @include shadow( 2px 2px 5px rgba(0, 0, 0, .3));
+    background-color: $white; 
+    opacity: .9;
+    z-index: 1;
+    padding: 0 1em;
+    .container {
+        .navbar-brand {
+            padding: 0;
+            img {
+                width: 3em;
+                height: 3em;
+            }
+        }
+        a {
+            img {
+                padding-top: .4em;
+            }
+        }
+        .navbar-collapse {
+            ul {
+                li {
+                    padding-right: 1em;
+                    a {
+                        color: #374047;
+                        font-size: 1em;
+                        font-family: "Cairo", sans-serif;
+                        font-weight: 600;
+                        padding: .25em 0 .3em 0;
+                    }
+                }
+                .about {
+                    padding-left: 1em;
+                    border-left: 1px solid #888
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .navbar {
+        .container {
+            .navbar-collapse {
+                ul {
+                    .about {
+                        padding-left: .5em;
+                        border-left: none;
+                    }
+                    li {
+                        padding: .25em .5em;
+                    }
+                    li:first-of-type {
+                        border-top: 1px solid #EEE;
+                    }
+                }
+            }
+        }
+    }
+}
